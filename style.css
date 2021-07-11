@@ -1,0 +1,87 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+  height: 100vh;
+}
+
+/* =============
+Layout
+=============*/
+
+.calculator {
+  width: 98%;
+  max-width: 380px;
+  margin: 5em auto;
+  padding: 0.3em;
+  background: #00000093;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+}
+
+.screen {
+  font-size: 2.7rem;
+  font-weight: 500;
+  text-align: right;
+  padding: 0.4em 0.1em;
+}
+
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2px;
+}
+
+.btn--clear,
+.btn--backspace {
+  grid-column: span 2;
+}
+
+.btn {
+  padding: 1em;
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.btn:hover {
+  background: #868686;
+}
+
+.btn:active {
+  background: #9c9c9c;
+}
+
+.btn--number {
+  background: rgba(0, 0, 0, 0.788);
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.btn--operator,
+.btn--clear,
+.btn--backspace,
+.btn--point,
+.btn--equals {
+  background: rgba(0, 0, 0, 0.534);
+  transition: background 0.2s;
+}
+
+/* Media Queries */
+
+@media (min-width: 350px) {
+  .screen {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 380px) {
+  .screen {
+    font-size: 3.2rem;
+  }
+}
