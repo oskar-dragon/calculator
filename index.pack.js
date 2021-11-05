@@ -14,10 +14,12 @@ let currentOperator = null;
 window.addEventListener("keydown", setInput);
 clearBtn.addEventListener("click", clear);
 backspaceBtn.addEventListener("click", deleteNumber);
-window.addEventListener("click", (e) => {
-  if (e.target.classList.contains("btn--number")) appendNumber(e.target.innerText);
+window.addEventListener("click", e => {
+  if (e.target.classList.contains("btn--number"))
+    appendNumber(e.target.innerText);
   if (e.target.classList.contains("btn--point")) appendPoint();
-  if (e.target.classList.contains("btn--operator")) setOperation(e.target.innerText);
+  if (e.target.classList.contains("btn--operator"))
+    setOperation(e.target.innerText);
   if (e.target.classList.contains("btn--equals")) evaluate();
 });
 
@@ -54,7 +56,8 @@ function setInput(e) {
   if (e.key === "=" || e.key === "Enter") evaluate();
   if (e.key === "Backspace") deleteNumber(); //*
   if (e.key === "Escape") clear(); //*
-  if (e.key === "+" || e.key === "-" || e.key === "*" || e.key === "/") setOperation(e.key);
+  if (e.key === "+" || e.key === "-" || e.key === "*" || e.key === "/")
+    setOperation(e.key);
 }
 
 function clear() {
@@ -76,7 +79,13 @@ function evaluate() {
   if (displayValue === "" || storedValue === "") {
     return null;
   } else {
-    displayValue = roundResult(operate(storedValue, displayValue, currentOperator)).toString();
+    const result = operate(storedValue, displayValue, currentOperator);
+    displayValue =
+      typeof result === "string"
+        ? result
+        : roundResult(
+            operate(storedValue, displayValue, currentOperator)
+          ).toString();
     display.textContent = displayValue;
     storedValue = "";
   }
