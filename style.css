@@ -1,3 +1,19 @@
+:root {
+  --ff-primary: "Roboto", sans-serif;
+
+  --fw-semi-bold: 500;
+
+  --fs-screen: 2.7rem;
+  --fs-btn: 1.2rem;
+
+  --clr-bg: #00000093;
+  --clr-light: #fff;
+  --clr-btn-fn: #00000088;
+  --clr-btn-num: #000000c9;
+  --clr-btn-hover: #868686;
+  --clr-btn-active: #9c9c9c;
+}
+
 *,
 *::before,
 *::after {
@@ -6,8 +22,8 @@
 
 body {
   margin: 0;
-  font-family: 'Roboto', sans-serif;
-  color: #fff;
+  font-family: var(--ff-primary);
+  color: var(--clr-light);
   height: 100vh;
 }
 
@@ -20,13 +36,13 @@ Layout
   max-width: 380px;
   margin: 5em auto;
   padding: 0.3em;
-  background: #00000093;
-  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+  background: var(--clr-bg);
+  box-shadow: 1px 1px 10px #00000080;
 }
 
 .screen {
-  font-size: 2.7rem;
-  font-weight: 500;
+  font-size: var(--fs-screen);
+  font-weight: var(--fw-semi-bold);
   text-align: right;
   padding: 0.4em 0.1em;
 }
@@ -46,20 +62,20 @@ Layout
   padding: 1em;
   border: none;
   color: #fff;
-  font-size: 1.2rem;
+  font-size: var(--fs-btn);
 }
 
 .btn:hover {
-  background: #868686;
+  background: var(--clr-btn-hover);
 }
 
 .btn:active {
-  background: #9c9c9c;
+  background: var(--clr-btn-active);
 }
 
 .btn--number {
-  background: rgba(0, 0, 0, 0.788);
-  font-weight: 500;
+  background: var(--clr-btn-num);
+  font-weight: var(--fw-semi-bold);
   transition: background 0.2s;
 }
 
@@ -68,20 +84,20 @@ Layout
 .btn--backspace,
 .btn--point,
 .btn--equals {
-  background: rgba(0, 0, 0, 0.534);
+  background: var(--clr-btn-fn);
   transition: background 0.2s;
 }
 
 /* Media Queries */
 
 @media (min-width: 350px) {
-  .screen {
-    font-size: 3rem;
+  :root {
+    --fs-screen: 3rem;
   }
 }
 
 @media (min-width: 380px) {
-  .screen {
-    font-size: 3.2rem;
+  :root {
+    --fs-screen: 3.2rem;
   }
 }
