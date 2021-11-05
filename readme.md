@@ -1,33 +1,42 @@
 # Calculator
+> Simple and minimal calculator
+
+
+> Live demo [_here_](https://oskar-dragon.github.io/calculator/).
 
 ## Table of Contents
+* [General Info](#general-information)
+* [Technologies Used](#technologies-used)
+* [Features](#features)
+* [Screenshots](#screenshots)
+* [Project Status](#project-status)
+* [Author Info](#author-info)
 
-- [General Info](#general-information)
-- [Features](#features)
-- [Screenshots](#screenshots)
-- [Project Status](#project-status)
-- [Acknowledgements](#acknowledgements)
 
 ## General Information
+Calculator app is a minimal app written in vanilla JavaScripts. The app provides standard calculator functionality that should be suffice for an everyday use. This project was created to consolidate my JavaScript knowledge.
 
-This project is part of The Odin Project curriculum. In this project, I've created a simple calculator. I did undertake this project to practice everything I've learned from The Odin Project so far.
+
+## Technologies Used
+- HTML5
+- CSS3
+- JavaScript
+
 
 ## Features
-
 List the ready features here:
+- Standard Calculator functionality which offers basic operations and evaluates commands immediately as they are entered.
 
-- User is able do calculatons
-- User can remove inputed value
-- User can clear calculator and start from the beginning
 
 ## Screenshots
-
-![Screenshot](https://i.gyazo.com/568d5ced97dd53954b525a97e027d9df.png)
+![Example screenshot](https://i.gyazo.com/f3d953f51390497a1d41d11a70eabbb6.png)
+<!-- If you have screenshots you'd like to share, include them here. -->
 
 ## Project Status
+Project is:  _complete_.
 
-Project is: _complete_
 
-## Acknowledgements
-
-- This project was an assignment that was part of [The Odin Project](https://www.theodinproject.com/).
+## Author Info
+Created by [Oskar Dragon](https://github.com/oskar-dragon) | 
+[LinkedIn](https://www.linkedin.com/in/oskar-dragon) | 
+[Instagram](https://www.instagram.com/skrdrgn___/)
